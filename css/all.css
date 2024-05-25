@@ -1,0 +1,296 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1020px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 420px;
+  }
+}
+
+.product-section {
+  background-color: #F6F5F2;
+}
+
+.product-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bg-color {
+  background-color: #fff;
+}
+
+.product {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+@media (max-width: 767px) {
+  .product {
+    width: 50%;
+    padding: 24px;
+  }
+}
+
+/* 商品名 */
+span {
+  display: block;
+  text-align: justify;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.btns {
+  display: flex;
+}
+
+.detailsBtn {
+  background-color: #e1ecf4;
+  border-radius: 4px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1.5;
+  outline: none;
+  padding: 8px 0.8em;
+  text-align: center;
+  margin-right: 12px;
+  /*   text-decoration: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap; */
+}
+
+.detailsBtn:hover,
+.detailsBtn:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.detailsBtn:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.detailsBtn:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+/* btn CSS */
+/* CSS */
+.btn-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 4px solid #666666;
+  border-bottom: 1px solid #666666;
+  position: relative;
+}
+.btn-box::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #666666;
+}
+
+.button-48 {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 12px 22px;
+  position: relative;
+  text-align: center;
+  transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1), background-color 100ms cubic-bezier(0.694, 0, 0.335, 1), color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+.button-48:before {
+  animation: opacityFallbackOut 0.5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #e5cdbc;
+  -webkit-clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+          clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+          clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
+
+/* CSS */
+.delBtn {
+  background: #ffffff;
+  color: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  cursor: pointer;
+  font-size: 13px;
+  /*   line-height: 16px; */
+  /*   min-height: 40px; */
+  outline: 0;
+  padding: 8px 0.8em;
+  text-rendering: geometricprecision;
+  /*   text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle; */
+}
+
+.delBtn:hover,
+.delBtn:active {
+  background-color: #FF4742;
+  background-position: 0 0;
+  color: #ffffff;
+}
+
+.delBtn:active {
+  opacity: 0.5;
+}
+
+.category {
+  font-size: 24px;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.description {
+  color: #666666;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.price {
+  color: red;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}/*# sourceMappingURL=all.css.map */

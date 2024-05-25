@@ -1,0 +1,241 @@
+
+
+  .container{
+    max-width: 1020px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    @include tablets{
+      max-width: 720px;
+    }
+    @include phones{
+      max-width: 420px;
+    }
+  }
+
+  .product-section{
+    background-color:#F6F5F2;
+    // background-color: #E3E1D9;
+    // background-color: #F8F4EC;
+  }
+  .product-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+  }
+  .bg-color{
+    background-color: #fff;
+  }
+  .product{
+    
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+    // @include phones{
+    //   width: 120px;
+    //   height: 120px;
+    // }
+    }
+   @include phones{
+    width: 50%;
+    padding: 24px;
+   }
+    
+  }
+  
+  /* 商品名 */
+  span {
+    display: block;
+    text-align: justify;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+  
+  
+  
+ 
+  
+  .btns {
+    display: flex;
+  
+  }
+  
+  .detailsBtn {
+    background-color: #e1ecf4;
+    border-radius: 4px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    color: #39739d;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.5;
+    outline: none;
+    padding: 8px .8em;
+    text-align: center;
+    margin-right: 12px;
+    /*   text-decoration: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap; */
+  }
+  
+  .detailsBtn:hover,
+  .detailsBtn:focus {
+    background-color: #b3d3ea;
+    color: #2c5777;
+  }
+  
+  .detailsBtn:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  }
+  
+  .detailsBtn:active {
+    background-color: #a0c7e4;
+    box-shadow: none;
+    color: #2c5777;
+  }
+  
+  /* btn CSS */
+ 
+
+
+
+
+/* CSS */
+.btn-box{
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 4px solid #666666;
+  border-bottom: 1px solid #666666;
+  // margin-top: 2px;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #666666;
+  }
+}
+.button-48 {
+  
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0;
+  
+  opacity: 1;
+  outline: 0;
+  padding: 12px 22px;
+  position: relative;
+  text-align: center;
+ 
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  
+}
+
+.button-48:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #e5cdbc;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
+  
+  
+  
+  /* CSS */
+  .delBtn {
+    background: #ffffff;
+    color: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    cursor: pointer;
+    font-size: 13px;
+    /*   line-height: 16px; */
+    /*   min-height: 40px; */
+    outline: 0;
+    padding: 8px .8em;
+    text-rendering: geometricprecision;
+    /*   text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle; */
+  }
+  
+  .delBtn:hover,
+  .delBtn:active {
+    background-color: #FF4742;
+    background-position: 0 0;
+    color: #ffffff;
+  }
+  
+  .delBtn:active {
+    opacity: .5;
+  }
+  
+  .category {
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .description {
+    color: #666666;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .weight {
+    color: red;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
