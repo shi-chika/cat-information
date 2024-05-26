@@ -1,122 +1,27 @@
 
-
+body{
+  font-family: "Josefin Sans", sans-serif;
+}
   .container{
-    max-width: 1020px;
+    max-width: 1096px;
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
-    @include tablets{
-      max-width: 720px;
-    }
-    @include phones{
-      max-width: 420px;
-    }
+    // @include tablets{
+    //   max-width: 720px;
+    // }
+    
   }
-
-  .product-section{
+  .cats-section{
     background-color:#F6F5F2;
+    padding-bottom: 62px;
     // background-color: #E3E1D9;
     // background-color: #F8F4EC;
   }
-  .product-box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
-  }
-  .bg-color{
-    background-color: #fff;
-  }
-  .product{
-    
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // padding: 50px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      vertical-align: middle;
-    // @include phones{
-    //   width: 120px;
-    //   height: 120px;
-    // }
-    }
-   @include phones{
-    width: 50%;
-    padding: 24px;
-   }
-    
-  }
-  
-  /* 商品名 */
-  span {
-    display: block;
-    text-align: justify;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    flex-grow: 1;
-  }
-  
-  
-  
- 
-  
-  .btns {
-    display: flex;
-  
-  }
-  
-  .detailsBtn {
-    background-color: #e1ecf4;
-    border-radius: 4px;
-    border: 1px solid #7aa7c7;
-    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-    color: #39739d;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 13px;
-    line-height: 1.5;
-    outline: none;
-    padding: 8px .8em;
-    text-align: center;
-    margin-right: 12px;
-    /*   text-decoration: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap; */
-  }
-  
-  .detailsBtn:hover,
-  .detailsBtn:focus {
-    background-color: #b3d3ea;
-    color: #2c5777;
-  }
-  
-  .detailsBtn:focus {
-    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-  }
-  
-  .detailsBtn:active {
-    background-color: #a0c7e4;
-    box-shadow: none;
-    color: #2c5777;
-  }
-  
-  /* btn CSS */
- 
 
-
-
-
-/* CSS */
-.btn-box{
-  display: flex;
-  justify-content: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
+.header{
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 4px solid #666666;
   border-bottom: 1px solid #666666;
   // margin-top: 2px;
@@ -130,9 +35,201 @@
     height: 1px;
     background-color: #666666;
   }
+  h1{
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-family: "Kiwi Maru", serif;
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 24px;
+    color: #747264;
+    color: #3D3B40;
+    // color: #3E3232;
+    // color: #503C3C;
+  }
+  p{
+    text-align: center;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    padding-top: 16px;
+  }
+  // .line-box{
+  //   display: flex;
+  //   justify-content: center;
+  //   padding-top: 12px;
+  //   padding-bottom: 16px;
+  //   span{
+  //     width: 30px;
+  //     height: 1px;
+  //     background-color: #000000;
+  //   }
+  // }
+}
+
+
+.cats-box{
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  column-gap: 42px;
+  row-gap: 62px;
+  @include tablets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include phones{
+    grid-template-columns: 1fr;
+  }
+}
+  
+
+.cat-card{
+  
+  background-color: #fff;
+  border: #8a8888 1.5px solid;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  padding-bottom: 32px;
+  // padding: 50px;
+.imgBox{
+  width:100%  ;
+  height: 350px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    }
+  }  
+  
+}
+  
+  /* 品種名 */
+  
+  .name{
+    text-align: center;
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .fa-heart{
+    display: inline-block;
+    color: #b41812;
+    // margin-left: 36px;
+    vertical-align: middle;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateX(24px);
+  }
+
+  .detailsBtn {
+    background-color: #e1ecf4;
+    border-radius: 4px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    color: #39739d;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+    padding: 8px 34px;
+    text-align: center;
+  }
+  .detailsBtn:hover,
+  .detailsBtn:focus {
+    background-color: #b3d3ea;
+    color: #2c5777;
+  }
+  .detailsBtn:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  }
+  
+  .detailsBtn:active {
+    background-color: #a0c7e4;
+    box-shadow: none;
+    color: #2c5777;
+  }
+
+  
+  
+  
+  
+  .description {
+    color: #666666;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: "Klee One", cursive;
+  }
+  
+  .description-title,.age-weight-label{
+    font-family: "Noto Sans JP", sans-serif;
+   
+  }
+ .description-title{
+  padding-bottom: 6px;
+  display: inline-block;
+ }
+
+  //!名字 產地
+.drawer-name-box{
+  padding: .5rem 2rem;
+  .drawer-name{
+      text-align: center;
+  }
+  .drawer-origin{
+      text-align: center;
+      span{
+          display: inline-block;
+          margin-left: 12px;
+      }
+  }
+}
+//!體重
+.age-weight{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem 2rem;
+  border-top: 1px solid #b8b4b4;
+  border-bottom: 1px solid #b8b4b4 ;
+  font-family: "Lato", sans-serif;
+  .age-weight-data{
+      display: flex;
+      flex-direction: column;
+      
+      align-items: center;
+  }
+  .vertical-line{
+      border-left: 1px solid #b8b4b4;
+      height: 38px;
+  }
+  .age-weight-num{
+      font-weight: 700;
+  }
+  .age-weight-label{
+      color: #666;
+  }
+}
+
+
+
+/* load btn CSS */
+.loadBtn-box{
+  display: flex;
+  justify-content: center;
 }
 .button-48 {
-  
   appearance: none;
   background-color: #FFFFFF;
   border-width: 0;
@@ -140,28 +237,32 @@
   color: #000000;
   cursor: pointer;
   display: inline-block;
-  font-family: "Arvo", serif;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 0;
   
-  opacity: 1;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 1em;
+  margin: 0;
+  
   outline: 0;
-  padding: 12px 22px;
+  padding: 16px 22px;
   position: relative;
   text-align: center;
- 
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  
   transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
   user-select: none;
   -webkit-user-select: none;
-  
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
 }
 
 .button-48:before {
   animation: opacityFallbackOut .5s step-end forwards;
   backface-visibility: hidden;
-  background-color: #e5cdbc;
+  background-color: #DBAFA0;
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
   content: "";
   height: 100%;
@@ -183,59 +284,7 @@
 }
 
 .button-48 span {
-  z-index: 1;
+  z-index: 5;
   position: relative;
+  font-family: "Kiwi Maru", serif;
 }
-  
-  
-  
-  /* CSS */
-  .delBtn {
-    background: #ffffff;
-    color: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-    cursor: pointer;
-    font-size: 13px;
-    /*   line-height: 16px; */
-    /*   min-height: 40px; */
-    outline: 0;
-    padding: 8px .8em;
-    text-rendering: geometricprecision;
-    /*   text-transform: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle; */
-  }
-  
-  .delBtn:hover,
-  .delBtn:active {
-    background-color: #FF4742;
-    background-position: 0 0;
-    color: #ffffff;
-  }
-  
-  .delBtn:active {
-    opacity: .5;
-  }
-  
-  .category {
-    font-size: 24px;
-    font-weight: 500;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  
-  .description {
-    color: #666666;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  
-  .weight {
-    color: red;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
