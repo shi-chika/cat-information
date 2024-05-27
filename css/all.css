@@ -110,6 +110,8 @@ body {
   text-align: center;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   padding-top: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .cats-box {

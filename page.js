@@ -94,16 +94,12 @@ async function render(){
       });
     };
     
-    
-    
     list.append(li);
     li.append(imgBox, name, btns);
     
     imgBox.append(img)
     btns.append(more, likeBtn);
 
-    
-    
     likeBtn.onclick = (e) => {
       if(e.target.className.includes('fa-regular')){
         e.target.classList.remove('fa-regular');
@@ -111,76 +107,9 @@ async function render(){
       }else{
         e.target.classList.remove('fa-solid');
         e.target.classList.add('fa-regular');
-      }
+      };
         
     };
-  }
-}
+  };
+};
 
-// loadBtn.addEventListener('click',()=>{
-//   fetch("https://fakestoreapi.com/products")
-//   .then((res) => res.json())
-//   .then((data) => {
-//     for (let product of data) {
-//       let list = document.querySelector("#list");
-//       let li = document.createElement("li");
-//       li.className = "product";
-//       let img = document.createElement("img");
-      
-//       let title = document.createElement("span");
-//       let btns = document.createElement("div");
-//       let more = document.createElement("button");
-//       let del = document.createElement("button");
-
-//       li.dataset.title = product.title;
-//       let saveTitle = li.dataset.title;
-//       li.dataset.category = product.category;
-//       let saveCa = li.dataset.category;
-//       li.dataset.description = product.description;
-//       let saveDes = li.dataset.description;
-//       li.dataset.image = product.image;
-//       let saveImg = li.dataset.image;
-//       li.dataset.weight = product.weight;
-//       let savePri = li.dataset.weight;
-
-//       img.src = product.image;
-//       title.textContent = product.title;
-//       more.textContent = "Details";
-//       more.className = "detailsBtn";
-//       more.onclick = () => {
-//         Swal.fire({
-//           title: saveTitle,
-//           html: `<p class="category"> ${saveCa} </p><hr>
-//                  <p class="description">${saveDes}<p/><hr> 
-//                  <p class="weight">$${savePri}</p>`,
-//           imageUrl: saveImg,
-//           imageWidth: 200,
-//           imageHeight: 200,
-//           confirmButtonText: "close",
-//           confirmButtonColor: "#ffa500",
-//           showCloseButton: false
-//         });
-//       };
-//       del.className = "delBtn";
-//       del.textContent = "Delete";
-//       btns.className = "btns";
-//       list.append(li);
-//       li.append(img, title, btns);
-//       btns.append(more, del);
-//       del.onclick = (e) => {
-//         fetch("https://fakestoreapi.com/products/6", { method: "DELETE" })
-//           .then((res) => res.json())
-//           .then((data) => {
-//             e.target.closest("li").remove();
-//           })
-//           .catch((error) => alert("システムでエラーが発生しました。しばらく時間を空けてからご利用ください。"));
-//       };
-//     }
-//   })
-//   .catch((error) => {
-//     alert("システムでエラーが発生しました。しばらく時間を空けてからご利用ください。");
-//   });
-
-
-// }) 
- 
