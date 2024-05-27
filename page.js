@@ -11,8 +11,8 @@ const url =`https://api.thecatapi.com/v1/images/search?api_key=${apikey}&limit=3
 // Data
 async function getdata (){
   const res = await fetch(url).catch((error)=>{alert("システムでエラーが発生しました。しばらく時間を空けてからご利用ください。")});;
-  const datas = await res.json();
-  return datas;
+  const getdata = await res.json();
+  return getdata;
 }
 
 // DOM
