@@ -6,7 +6,7 @@ const loadBtn = document.querySelector("#loadBtn");
 loadBtn.addEventListener('click', render)
 
 const apikey = "live_p2BBUekHFih0yGPvhMXdj0fOwro7duwaDGSoSxg7LYQ30wbExYcu4joK7tlLxXiu";
-const url =`https://api.thecatapi.com/v1/images/search?api_key=${apikey}&limit=3&order=RAND&has_breeds=1`;
+const url =`https://api.thecatapi.com/v1/images/search?api_key=${apikey}&limit=9&order=RAND&has_breeds=1`;
 
 // Data
 async function getdata (){
